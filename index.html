@@ -1,109 +1,342 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Site Pessoal</title>
-  <meta name="description" content="Site pessoal simples em HTML e CSS." />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-  <header class="header">
-    <nav class="nav" aria-label="Navegação principal">
-      <a class="brand" href="#topo">SitePessoal</a>
-      <ul class="nav__links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-      <button class="theme" id="themeToggle" type="button" aria-pressed="false">Tema</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcílio Aguiar | Backend Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">MA</a>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">Sobre</a></li>
+          <li><a href="#skills" class="nav-link">Habilidades</a></li>
+          <li><a href="#projects" class="nav-link">Projetos</a></li>
+          <li><a href="#contact" class="nav-link">Contato</a></li>
+        </ul>
+      </div>
     </nav>
 
-    <section class="hero" id="topo">
-      <p class="eyebrow">Olá, eu sou</p>
-      <h1 class="title">Omar Cílio Aguiar</h1>
-      <p class="subtitle">Este é um template simples (HTML + CSS) para começar seu site pessoal.</p>
-      <div class="cta">
-        <a class="button" href="#projetos">Ver projetos</a>
-        <a class="button button--ghost" href="#contato">Entrar em contato</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="hero-greeting">Olá, eu sou</p>
+        <h1 class="hero-name">Marcílio Aguiar</h1>
+        <h2 class="hero-title">
+          <span class="typed-text">Backend Developer</span>
+        </h2>
+        <p class="hero-description">
+          Desenvolvedor Backend apaixonado por criar soluções escaláveis e
+          robustas. Especializado em Java, Spring Boot e arquiteturas de
+          microsserviços com nuvem AWS.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+          <a href="#contact" class="btn btn-outline">Entre em Contato</a>
+        </div>
+        <div class="hero-social">
+          <a
+            href="https://github.com/omarcilioaguiar"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/omarcilioaguiar"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
       </div>
-    </section>
-  </header>
-
-  <main id="conteudo" class="main">
-    <section id="sobre" class="section">
-      <h2>Sobre</h2>
-      <p>
-        Escreva aqui uma breve descrição sobre você, suas áreas de interesse e o que você está construindo.
-      </p>
-      <ul class="chips" aria-label="Tecnologias">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript (opcional)</li>
-      </ul>
-    </section>
-
-    <section id="projetos" class="section">
-      <h2>Projetos</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Projeto 1</h3>
-          <p>Descrição curta do projeto. Troque por algo real.</p>
-          <a class="link" href="#">Repositório</a>
-        </article>
-        <article class="card">
-          <h3>Projeto 2</h3>
-          <p>Descrição curta do projeto. Troque por algo real.</p>
-          <a class="link" href="#">Demo</a>
-        </article>
-        <article class="card">
-          <h3>Projeto 3</h3>
-          <p>Descrição curta do projeto. Troque por algo real.</p>
-          <a class="link" href="#">Artigo</a>
-        </article>
+      <div class="hero-image">
+        <div class="hero-avatar">
+          <img
+            src="https://avatars.githubusercontent.com/u/23151358?v=4"
+            alt="Marcílio Aguiar"
+          />
+        </div>
       </div>
     </section>
 
-    <section id="contato" class="section">
-      <h2>Contato</h2>
-      <p>
-        Você pode me encontrar por aqui:
-      </p>
-      <ul class="contact">
-        <li><strong>Email:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/omarcilioaguiar">@omarcilioaguiar</a></li>
-        <li><strong>LinkedIn:</strong> <a href="#">seu-linkedin</a></li>
-      </ul>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">Sobre <span>Mim</span></h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Sou um desenvolvedor Backend com foco em construir APIs robustas e
+              escaláveis. Tenho experiência com <strong>Java</strong>,
+              <strong>Spring Boot</strong> e <strong>Quarkus</strong>, além de
+              trabalhar com arquiteturas de microsserviços e comunicação
+              assíncrona com <strong>Kafka</strong>.
+            </p>
+            <p>
+              Utilizo ferramentas de infraestrutura como <strong>Terraform</strong>
+              para provisionamento na <strong>AWS</strong> e
+              <strong>Docker</strong> para containerização das aplicações.
+              Busco sempre escrever código limpo, testável e de fácil
+              manutenção.
+            </p>
+            <div class="about-info">
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Brasil</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>omarcilioaguiar@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/omarcilioaguiar" target="_blank"
+                  >omarcilioaguiar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <p>© <span id="year"></span> Omar Cílio Aguiar. Feito com HTML + CSS.</p>
-  </footer>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">Minhas <span>Habilidades</span></h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fab fa-java"></i>
+            </div>
+            <h3>Java</h3>
+            <p>Linguagem principal com foco em aplicações backend robustas</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Spring Boot</h3>
+            <p>Desenvolvimento de APIs REST e microsserviços</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Quarkus</h3>
+            <p>Framework Java para aplicações cloud-native e microsserviços</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h3>Apache Kafka</h3>
+            <p>Mensageria e comunicação assíncrona entre serviços</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fab fa-aws"></i>
+            </div>
+            <h3>AWS</h3>
+            <p>Serviços de nuvem para deploy e infraestrutura</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h3>Terraform</h3>
+            <p>Infraestrutura como código para provisionamento na nuvem</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fab fa-docker"></i>
+            </div>
+            <h3>Docker</h3>
+            <p>Containerização e orquestração de aplicações</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>PostgreSQL</h3>
+            <p>Banco de dados relacional para aplicações de produção</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Meus <span>Projetos</span></h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <i class="fas fa-code"></i>
+              <div class="project-links">
+                <a
+                  href="https://github.com/omarcilioaguiar/portfolio/tree/main/springboot-rest-api"
+                  target="_blank"
+                  aria-label="Ver código"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <h3>Spring Boot API REST</h3>
+            <p>
+              API RESTful completa com Spring Boot e PostgreSQL. Implementação
+              de CRUD com boas práticas de desenvolvimento e documentação.
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>PostgreSQL</span>
+              <span>REST</span>
+            </div>
+          </div>
 
-    const root = document.documentElement;
-    const btn = document.getElementById('themeToggle');
+          <div class="project-card">
+            <div class="project-header">
+              <i class="fas fa-briefcase"></i>
+              <div class="project-links">
+                <a
+                  href="https://github.com/omarcilioaguiar/gestao_vagas_api"
+                  target="_blank"
+                  aria-label="Ver código"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <h3>Gestão de Vagas API</h3>
+            <p>
+              Sistema de gerenciamento de vagas de emprego. API backend com
+              Spring Boot, JWT authentication e PostgreSQL.
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>JWT</span>
+              <span>Docker</span>
+            </div>
+          </div>
 
-    function setTheme(next) {
-      root.dataset.theme = next;
-      btn.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
-      localStorage.setItem('theme', next);
-    }
+          <div class="project-card">
+            <div class="project-header">
+              <i class="fas fa-stream"></i>
+              <div class="project-links">
+                <a
+                  href="https://github.com/omarcilioaguiar/portfolio/tree/main/quarkus-kafka-microservice"
+                  target="_blank"
+                  aria-label="Ver código"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <h3>Quarkus + Kafka Microsserviço</h3>
+            <p>
+              Microsserviço desenvolvido com Quarkus e Apache Kafka para
+              comunicação assíncrona e processamento de mensagens em tempo real.
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>Quarkus</span>
+              <span>Kafka</span>
+              <span>Microsserviços</span>
+            </div>
+          </div>
 
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark' || saved === 'light') setTheme(saved);
+          <div class="project-card">
+            <div class="project-header">
+              <i class="fas fa-cloud"></i>
+              <div class="project-links">
+                <a
+                  href="https://github.com/omarcilioaguiar/portfolio/tree/main/terraform-aws-deploy"
+                  target="_blank"
+                  aria-label="Ver código"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <h3>Terraform AWS Deploy</h3>
+            <p>
+              Infraestrutura como código para deploy automatizado na AWS.
+              Provisionamento de recursos com Terraform e pipelines CI/CD.
+            </p>
+            <div class="project-tags">
+              <span>Terraform</span>
+              <span>AWS</span>
+              <span>IaC</span>
+              <span>DevOps</span>
+            </div>
+          </div>
+        </div>
+        <div class="projects-footer">
+          <a
+            href="https://github.com/omarcilioaguiar"
+            target="_blank"
+            class="btn btn-outline"
+          >
+            <i class="fab fa-github"></i> Ver todos no GitHub
+          </a>
+        </div>
+      </div>
+    </section>
 
-    btn.addEventListener('click', () => {
-      const current = root.dataset.theme === 'dark' ? 'dark' : 'light';
-      setTheme(current === 'dark' ? 'light' : 'dark');
-    });
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Entre em <span>Contato</span></h2>
+        <p class="contact-subtitle">
+          Estou aberto a novas oportunidades e colaborações. Sinta-se à vontade
+          para entrar em contato!
+        </p>
+        <div class="contact-cards">
+          <a
+            href="https://github.com/omarcilioaguiar"
+            target="_blank"
+            class="contact-card"
+          >
+            <i class="fab fa-github"></i>
+            <h3>GitHub</h3>
+            <p>omarcilioaguiar</p>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/omarcilioaguiar"
+            target="_blank"
+            class="contact-card"
+          >
+            <i class="fab fa-linkedin-in"></i>
+            <h3>LinkedIn</h3>
+            <p>Conecte-se comigo</p>
+          </a>
+          <a href="mailto:omarcilioaguiar@gmail.com" class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <h3>E-mail</h3>
+            <p>omarcilioaguiar@gmail.com</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    if (!root.dataset.theme) setTheme('light');
-  </script>
-</body>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2024 Marcílio Aguiar. Desenvolvido com
+          <i class="fas fa-heart"></i> usando HTML &amp; CSS.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
