@@ -20,44 +20,58 @@
       <div class="nav-container">
         <a href="#home" class="nav-logo">MA</a>
         <ul class="nav-menu">
-          <li><a href="#about" class="nav-link">Sobre</a></li>
-          <li><a href="#skills" class="nav-link">Habilidades</a></li>
-          <li><a href="#projects" class="nav-link">Projetos</a></li>
-          <li><a href="#contact" class="nav-link">Contato</a></li>
+          <li><a href="#about" class="nav-link" id="nav-about">Sobre</a></li>
+          <li><a href="#skills" class="nav-link" id="nav-skills">Habilidades</a></li>
+          <li><a href="#projects" class="nav-link" id="nav-projects">Projetos</a></li>
+          <li><a href="#contact" class="nav-link" id="nav-contact">Contato</a></li>
         </ul>
+        <div class="language-switcher" id="language-switcher" aria-label="Selecionar idioma">
+          <button type="button" class="lang-btn active" data-lang="pt" id="lang-btn-pt" aria-label="Português" title="Português">
+            <img src="https://flagcdn.com/w20/br.png" alt="Bandeira do Brasil" />
+          </button>
+          <button type="button" class="lang-btn" data-lang="en" id="lang-btn-en" aria-label="English" title="English">
+            <img src="https://flagcdn.com/w20/us.png" alt="United States flag" />
+          </button>
+          <button type="button" class="lang-btn" data-lang="es" id="lang-btn-es" aria-label="Español" title="Español">
+            <img src="https://flagcdn.com/w20/es.png" alt="Bandera de España" />
+          </button>
+        </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="hero-content">
-        <p class="hero-greeting">Olá, eu sou </p>
-        <h1 class="hero-name">O Marcílio Aguiar</h1>
+        <p class="hero-greeting" id="hero-greeting">Olá, eu sou </p>
+        <h1 class="hero-name" id="hero-name">O Marcílio Aguiar</h1>
         <h2 class="hero-title">
-          <span class="typed-text">Systems Developer</span>
+          <span class="typed-text" id="hero-role">Systems Developer</span>
         </h2>
-        <p class="hero-description">
+        <p class="hero-description" id="hero-description">
           Desenvolvedor de Sistemas apaixonado por criar soluções escaláveis e
           robustas. Especializado em Java, Spring Boot, Python, Node.js, React, Angular e arquiteturas de microsserviços com nuvem AWS.
         </p>
         <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-          <a href="#contact" class="btn btn-outline">Entre em Contato</a>
+          <a href="#projects" class="btn btn-primary" id="hero-btn-projects">Ver Projetos</a>
+          <a href="#contact" class="btn btn-outline" id="hero-btn-contact">Entre em Contato</a>
         </div>
         <div class="hero-social">
           <a
+            id="hero-social-github"
             href="https://github.com/omarcilioaguiar"
             target="_blank"
             aria-label="GitHub"
             ><i class="fab fa-github"></i
           ></a>
           <a
+            id="hero-social-linkedin"
             href="https://www.linkedin.com/in/omarcilioaguiar"
             target="_blank"
             aria-label="LinkedIn"
             ><i class="fab fa-linkedin-in"></i
           ></a>
           <a
+            id="hero-social-whatsapp"
             href="https://wa.me/5577981353582"
             target="_blank"
             aria-label="WhatsApp"
@@ -78,27 +92,32 @@
     <!-- About Section -->
     <section id="about" class="about">
       <div class="container">
-        <h2 class="section-title">Sobre <span>Mim</span></h2>
+        <h2 class="section-title" id="about-title">Sobre <span>Mim</span></h2>
         <div class="about-content">
           <div class="about-text">
-            <p>
-              Sou um desenvolvedor Backend com foco em construir APIs robustas e
-              escaláveis. Tenho experiência com <strong>Java</strong>,
-              <strong>Spring Boot</strong> e <strong>Quarkus</strong>, além de
-              trabalhar com arquiteturas de microsserviços e comunicação
-              assíncrona com <strong>Kafka</strong>.
+            <p id="about-p1">
+              Sou um desenvolvedor de sistemas com foco em soluções robustas e
+              escaláveis, atuando principalmente no backend com
+              <strong>Java</strong>, <strong>Spring Boot</strong> e
+              <strong>Quarkus</strong>, além de experiência prática com
+              <strong>Python</strong> e <strong>Node.js</strong> para automações,
+              serviços e integrações.
             </p>
-            <p>
-              Utilizo ferramentas de infraestrutura como <strong>Terraform</strong>
-              para provisionamento na <strong>AWS</strong> e
-              <strong>Docker</strong> para containerização das aplicações.
-              Busco sempre escrever código limpo, testável e de fácil
-              manutenção.
+            <p id="about-p2">
+              Também desenvolvo interfaces com <strong>React</strong> e
+              <strong>Angular</strong>, trabalho com arquitetura de
+              <strong>microsserviços</strong>, comunicação assíncrona com
+              <strong>Kafka</strong>, dados com <strong>PostgreSQL</strong> e
+              infraestrutura em <strong>AWS</strong>, <strong>Terraform</strong>
+              e <strong>Docker</strong>. No dia a dia, aplico
+              <strong>TDD</strong>, gestão ágil, construção de backlog e métricas
+              de entrega com critérios claros de <strong>DoR</strong> e
+              <strong>DoD</strong>.
             </p>
             <div class="about-info">
               <div class="info-item">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>Brasil</span>
+                <span id="about-country">Brasil</span>
               </div>
               <div class="info-item">
                 <i class="fas fa-envelope"></i>
@@ -119,147 +138,147 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
       <div class="container">
-        <h2 class="section-title">Minhas <span>Habilidades</span></h2>
+        <h2 class="section-title" id="skills-title">Minhas <span>Habilidades</span></h2>
         <div class="skills-grid">
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fab fa-java"></i>
             </div>
-            <h3>Java</h3>
-            <p>Linguagem principal com foco em aplicações backend robustas</p>
+            <h3 id="skill-1-title">Java</h3>
+            <p id="skill-1-desc">Linguagem principal com foco em aplicações backend robustas</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-leaf"></i>
             </div>
-            <h3>Spring Boot</h3>
-            <p>Desenvolvimento de APIs REST e microsserviços</p>
+            <h3 id="skill-2-title">Spring Boot</h3>
+            <p id="skill-2-desc">Desenvolvimento de APIs REST e microsserviços</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fab fa-python"></i>
             </div>
-            <h3>Python</h3>
-            <p>Automação, scripts e serviços backend para soluções escaláveis</p>
+            <h3 id="skill-3-title">Python</h3>
+            <p id="skill-3-desc">Automação, scripts e serviços backend para soluções escaláveis</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fab fa-node-js"></i>
             </div>
-            <h3>Node.js</h3>
-            <p>Construção de APIs e aplicações server-side com JavaScript</p>
+            <h3 id="skill-4-title">Node.js</h3>
+            <p id="skill-4-desc">Construção de APIs e aplicações server-side com JavaScript</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fab fa-react"></i>
             </div>
-            <h3>React</h3>
-            <p>Interfaces modernas, componentizadas e orientadas à performance</p>
+            <h3 id="skill-5-title">React</h3>
+            <p id="skill-5-desc">Interfaces modernas, componentizadas e orientadas à performance</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fab fa-angular"></i>
             </div>
-            <h3>Angular</h3>
-            <p>Aplicações frontend robustas com arquitetura escalável</p>
+            <h3 id="skill-6-title">Angular</h3>
+            <p id="skill-6-desc">Aplicações frontend robustas com arquitetura escalável</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-bolt"></i>
             </div>
-            <h3>Quarkus</h3>
-            <p>Framework Java para aplicações cloud-native e microsserviços</p>
+            <h3 id="skill-7-title">Quarkus</h3>
+            <p id="skill-7-desc">Framework Java para aplicações cloud-native e microsserviços</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-cubes"></i>
             </div>
-            <h3>Arquitetura de Microsserviços</h3>
-            <p>Design de sistemas distribuídos com foco em escalabilidade</p>
+            <h3 id="skill-8-title">Arquitetura de Microsserviços</h3>
+            <p id="skill-8-desc">Design de sistemas distribuídos com foco em escalabilidade</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-exchange-alt"></i>
             </div>
-            <h3>Apache Kafka</h3>
-            <p>Mensageria e comunicação assíncrona entre serviços</p>
+            <h3 id="skill-9-title">Apache Kafka</h3>
+            <p id="skill-9-desc">Mensageria e comunicação assíncrona entre serviços</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fab fa-aws"></i>
             </div>
-            <h3>AWS</h3>
-            <p>Serviços de nuvem para deploy e infraestrutura</p>
+            <h3 id="skill-10-title">AWS</h3>
+            <p id="skill-10-desc">Serviços de nuvem para deploy e infraestrutura</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-network-wired"></i>
             </div>
-            <h3>Terraform</h3>
-            <p>Infraestrutura como código para provisionamento na nuvem</p>
+            <h3 id="skill-11-title">Terraform</h3>
+            <p id="skill-11-desc">Infraestrutura como código para provisionamento na nuvem</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fab fa-docker"></i>
             </div>
-            <h3>Docker</h3>
-            <p>Containerização e orquestração de aplicações</p>
+            <h3 id="skill-12-title">Docker</h3>
+            <p id="skill-12-desc">Containerização e orquestração de aplicações</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-database"></i>
             </div>
-            <h3>PostgreSQL</h3>
-            <p>Banco de dados relacional para aplicações de produção</p>
+            <h3 id="skill-13-title">PostgreSQL</h3>
+            <p id="skill-13-desc">Banco de dados relacional para aplicações de produção</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-vial"></i>
             </div>
-            <h3>TDD</h3>
-            <p>Desenvolvimento orientado a testes para código confiável e evolutivo</p>
+            <h3 id="skill-14-title">TDD</h3>
+            <p id="skill-14-desc">Desenvolvimento orientado a testes para código confiável e evolutivo</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-list-check"></i>
             </div>
-            <h3>Product Backlog Building</h3>
-            <p>Estruturação e refinamento de backlog com foco em valor de negócio</p>
+            <h3 id="skill-15-title">Product Backlog Building</h3>
+            <p id="skill-15-desc">Estruturação e refinamento de backlog com foco em valor de negócio</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-people-arrows"></i>
             </div>
-            <h3>Gestão Ágil</h3>
-            <p>Condução de times e ciclos de entrega com práticas ágeis</p>
+            <h3 id="skill-16-title">Gestão Ágil</h3>
+            <p id="skill-16-desc">Condução de times e ciclos de entrega com práticas ágeis</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-lightbulb"></i>
             </div>
-            <h3>Brainstorm</h3>
-            <p>Facilitação de sessões colaborativas para ideação e resolução de problemas</p>
+            <h3 id="skill-17-title">Brainstorm</h3>
+            <p id="skill-17-desc">Facilitação de sessões colaborativas para ideação e resolução de problemas</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-chart-line"></i>
             </div>
-            <h3>Métricas</h3>
-            <p>Acompanhamento de indicadores para melhoria contínua de produto e time</p>
+            <h3 id="skill-18-title">Métricas</h3>
+            <p id="skill-18-desc">Acompanhamento de indicadores para melhoria contínua de produto e time</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-clipboard-check"></i>
             </div>
-            <h3>DoR</h3>
-            <p>Definition of Ready para garantir clareza antes de iniciar as entregas</p>
+            <h3 id="skill-19-title">DoR</h3>
+            <p id="skill-19-desc">Definition of Ready para garantir clareza antes de iniciar as entregas</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-award"></i>
             </div>
-            <h3>DoD</h3>
-            <p>Definition of Done para padronizar qualidade e critérios de conclusão</p>
+            <h3 id="skill-20-title">DoD</h3>
+            <p id="skill-20-desc">Definition of Done para padronizar qualidade e critérios de conclusão</p>
           </div>
         </div>
       </div>
@@ -268,13 +287,14 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section-title">Meus <span>Projetos</span></h2>
+        <h2 class="section-title" id="projects-title">Meus <span>Projetos</span></h2>
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-header">
               <i class="fas fa-code"></i>
               <div class="project-links">
                 <a
+                  id="project-1-code-link"
                   href="https://github.com/omarcilioaguiar/portfolio/tree/main/springboot-rest-api"
                   target="_blank"
                   aria-label="Ver código"
@@ -282,10 +302,12 @@
                 ></a>
               </div>
             </div>
-            <h3>Spring Boot API REST</h3>
-            <p>
-              API RESTful completa com Spring Boot e PostgreSQL. Implementação
-              de CRUD com boas práticas de desenvolvimento e documentação.
+            <h3 id="project-1-title">Spring Boot API REST</h3>
+            <p id="project-1-desc">
+              Problema: necessidade de padronizar operações de cadastro.
+              Solução: API REST com Spring Boot e PostgreSQL, documentação e
+              boas práticas. Resultado: base confiável para integrações e
+              evolução contínua.
             </p>
             <div class="project-tags">
               <span>Java</span>
@@ -300,6 +322,7 @@
               <i class="fas fa-briefcase"></i>
               <div class="project-links">
                 <a
+                  id="project-2-code-link"
                   href="https://github.com/omarcilioaguiar/gestao_vagas_api"
                   target="_blank"
                   aria-label="Ver código"
@@ -307,10 +330,11 @@
                 ></a>
               </div>
             </div>
-            <h3>Gestão de Vagas API</h3>
-            <p>
-              Sistema de gerenciamento de vagas de emprego. API backend com
-              Spring Boot, JWT authentication e PostgreSQL.
+            <h3 id="project-2-title">Gestão de Vagas API</h3>
+            <p id="project-2-desc">
+              Problema: gestão manual de vagas e candidaturas. Solução: API
+              backend com Spring Boot, JWT e PostgreSQL. Resultado: processo
+              mais seguro, organizado e escalável para recrutamento.
             </p>
             <div class="project-tags">
               <span>Java</span>
@@ -325,6 +349,7 @@
               <i class="fas fa-stream"></i>
               <div class="project-links">
                 <a
+                  id="project-3-code-link"
                   href="https://github.com/omarcilioaguiar/portfolio/tree/main/quarkus-kafka-microservice"
                   target="_blank"
                   aria-label="Ver código"
@@ -332,10 +357,12 @@
                 ></a>
               </div>
             </div>
-            <h3>Quarkus + Kafka Microsserviço</h3>
-            <p>
-              Microsserviço desenvolvido com Quarkus e Apache Kafka para
-              comunicação assíncrona e processamento de mensagens em tempo real.
+            <h3 id="project-3-title">Quarkus + Kafka Microsserviço</h3>
+            <p id="project-3-desc">
+              Problema: integração entre serviços em alto volume. Solução:
+              microsserviço com Quarkus e Kafka para comunicação assíncrona.
+              Resultado: processamento em tempo real com mais resiliência e
+              desacoplamento.
             </p>
             <div class="project-tags">
               <span>Java</span>
@@ -350,6 +377,7 @@
               <i class="fas fa-cloud"></i>
               <div class="project-links">
                 <a
+                  id="project-4-code-link"
                   href="https://github.com/omarcilioaguiar/portfolio/tree/main/terraform-aws-deploy"
                   target="_blank"
                   aria-label="Ver código"
@@ -357,10 +385,12 @@
                 ></a>
               </div>
             </div>
-            <h3>Terraform AWS Deploy</h3>
-            <p>
-              Infraestrutura como código para deploy automatizado na AWS.
-              Provisionamento de recursos com Terraform e pipelines CI/CD.
+            <h3 id="project-4-title">Terraform AWS Deploy</h3>
+            <p id="project-4-desc">
+              Problema: infraestrutura criada manualmente e com risco de
+              inconsistência. Solução: provisionamento em AWS com Terraform e
+              pipelines CI/CD. Resultado: deploy mais rápido, reproduzível e
+              seguro.
             </p>
             <div class="project-tags">
               <span>Terraform</span>
@@ -375,6 +405,7 @@
             href="https://github.com/omarcilioaguiar"
             target="_blank"
             class="btn btn-outline"
+            id="projects-see-all"
           >
             <i class="fab fa-github"></i> Ver todos no GitHub
           </a>
@@ -385,8 +416,8 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2 class="section-title">Entre em <span>Contato</span></h2>
-        <p class="contact-subtitle">
+        <h2 class="section-title" id="contact-title">Entre em <span>Contato</span></h2>
+        <p class="contact-subtitle" id="contact-subtitle">
           Estou aberto a novas oportunidades e colaborações. Sinta-se à vontade
           para entrar em contato!
         </p>
@@ -407,11 +438,11 @@
           >
             <i class="fab fa-linkedin-in"></i>
             <h3>LinkedIn</h3>
-            <p>Conecte-se comigo</p>
+            <p id="contact-linkedin-subtitle">Conecte-se comigo</p>
           </a>
           <a href="mailto:omarcilioaguiar@gmail.com" class="contact-card">
             <i class="fas fa-envelope"></i>
-            <h3>E-mail</h3>
+            <h3 id="contact-email-title">E-mail</h3>
             <p>marcilo.paguiar@gmail.com</p>
           </a>
           <a
@@ -420,20 +451,20 @@
             class="contact-card"
           >
             <i class="fab fa-whatsapp"></i>
-            <h3>WhatsApp</h3>
+            <h3 id="contact-whatsapp-title">WhatsApp</h3>
             <p>(77) 98135-3582</p>
           </a>
           <a href="#contato-direto" class="contact-card">
             <i class="fas fa-address-card"></i>
-            <h3>Contato Direto</h3>
-            <p>Preencha o formulario completo</p>
+            <h3 id="direct-contact-card-title">Contato Direto</h3>
+            <p id="direct-contact-card-subtitle">Preencha o formulário completo</p>
           </a>
         </div>
 
         <div id="contato-direto" class="contact-form-wrapper">
-          <h3 class="contact-form-title">Contato Direto</h3>
+          <h3 class="contact-form-title" id="contact-form-title">Contato Direto</h3>
           <p id="contact-form-help" class="contact-form-subtitle">
-            Envie suas informações e retorno o contato o mais breve possivel.
+            Envie suas informações e retorno o contato o mais breve possível.
           </p>
           <form
             id="contact-form"
@@ -449,15 +480,15 @@
             />
             <input type="hidden" name="_language" value="pt-BR" />
             <p id="required-fields-note" class="sr-only">
-              Todos os campos marcados como obrigatorios precisam ser preenchidos.
+              Todos os campos marcados como obrigatórios precisam ser preenchidos.
             </p>
 
             <fieldset class="form-fieldset">
-              <legend>Dados de contato</legend>
+              <legend id="fieldset-contact-data">Dados de contato</legend>
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="nome-completo">Nome completo *</label>
+                  <label for="nome-completo" id="label-full-name">Nome completo *</label>
                   <input
                     type="text"
                     id="nome-completo"
@@ -468,7 +499,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="email">E-mail *</label>
+                  <label for="email" id="label-email">E-mail *</label>
                   <input
                     type="email"
                     id="email"
@@ -482,7 +513,7 @@
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="telefone">Telefone *</label>
+                  <label for="telefone" id="label-phone">Telefone *</label>
                   <input
                     type="tel"
                     id="telefone"
@@ -494,7 +525,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="cidade">Cidade e Estado *</label>
+                  <label for="cidade" id="label-city-state">Cidade e Estado *</label>
                   <input
                     type="text"
                     id="cidade"
@@ -508,11 +539,11 @@
             </fieldset>
 
             <fieldset class="form-fieldset">
-              <legend>Detalhes da solicitacao</legend>
+              <legend id="fieldset-request-details">Detalhes da solicitação</legend>
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="assunto">Assunto *</label>
+                  <label for="assunto" id="label-subject">Assunto *</label>
                   <input
                     type="text"
                     id="assunto"
@@ -523,10 +554,10 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="origem">Onde viu minha página? *</label>
+                  <label for="origem" id="label-source">Onde viu minha página? *</label>
                   <select id="origem" name="origem" required>
                     <option value="" selected disabled>Selecione uma opção</option>
-                    <option value="amigos">Indicacao de amigos</option>
+                    <option value="amigos">Indicação de amigos</option>
                     <option value="redes-sociais">Redes sociais</option>
                     <option value="colegas-trabalho">Colegas de trabalho</option>
                     <option value="github">GitHub</option>
@@ -542,7 +573,7 @@
                 class="form-group conditional-field"
                 hidden
               >
-                <label for="ia-fonte">Qual IA indicou a pagina? *</label>
+                <label for="ia-fonte" id="label-ia-source">Qual IA indicou a página? *</label>
                 <select id="ia-fonte" name="ia_fonte" disabled>
                   <option value="" selected disabled>Selecione a IA</option>
                   <option value="chatgpt">ChatGPT</option>
@@ -572,7 +603,7 @@
               </div>
 
               <div class="form-group">
-                <label for="mensagem">Mensagem *</label>
+                <label for="mensagem" id="label-message">Mensagem *</label>
                 <textarea
                   id="mensagem"
                   name="mensagem"
@@ -587,7 +618,7 @@
               type="submit"
               id="contact-submit"
               class="btn btn-primary"
-              aria-label="Enviar formulario de contato direto"
+              aria-label="Enviar formulário de contato direto"
             >
               Enviar Contato
             </button>
@@ -607,7 +638,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>
+        <p id="footer-text">
           &copy; 2026 Marcílio Aguiar. Desenvolvido com
           <i class="fas fa-heart"></i> usando HTML &amp; CSS.
         </p>
@@ -623,6 +654,610 @@
       const iaFonteSelect = document.getElementById("ia-fonte");
       const iaOtherGroup = document.getElementById("ia-other-group");
       const iaOutraInput = document.getElementById("ia-outra");
+      const languageButtons = document.querySelectorAll(".lang-btn");
+      const formLanguageInput = document.querySelector('input[name="_language"]');
+
+      let currentLang = localStorage.getItem("siteLang") || "pt";
+
+      const translations = {
+        pt: {
+          navAbout: "Sobre",
+          navSkills: "Habilidades",
+          navProjects: "Projetos",
+          navContact: "Contato",
+          languageSwitcherAria: "Selecionar idioma",
+          langPtAria: "Português",
+          langEnAria: "Inglês",
+          langEsAria: "Espanhol",
+          socialGithubAria: "GitHub",
+          socialLinkedinAria: "LinkedIn",
+          socialWhatsappAria: "WhatsApp",
+          projectCodeAria: "Ver código",
+          heroGreeting: "Olá, eu sou",
+          heroName: "O Marcílio Aguiar",
+          heroRole: "Desenvolvedor de Sistemas",
+          heroDescription:
+            "Desenvolvedor de Sistemas focado em transformar desafios de negócio em soluções escaláveis e robustas. Atuo com Java, Spring Boot, Python, Node.js, React, Angular e arquitetura de microsserviços em AWS.",
+          heroBtnProjects: "Ver Projetos",
+          heroBtnContact: "Entre em Contato",
+          aboutTitle: "Sobre <span>Mim</span>",
+          aboutP1:
+            "Sou um desenvolvedor de sistemas com foco em resultados, atuando principalmente no backend com <strong>Java</strong>, <strong>Spring Boot</strong> e <strong>Quarkus</strong>, além de experiência prática com <strong>Python</strong> e <strong>Node.js</strong> para automações, serviços e integrações.",
+          aboutP2:
+            "Também desenvolvo interfaces com <strong>React</strong> e <strong>Angular</strong>, trabalho com arquitetura de <strong>microsserviços</strong>, comunicação assíncrona com <strong>Kafka</strong>, dados com <strong>PostgreSQL</strong> e infraestrutura em <strong>AWS</strong>, <strong>Terraform</strong> e <strong>Docker</strong>. No dia a dia, aplico <strong>TDD</strong>, gestão ágil, construção de backlog e métricas para garantir qualidade, previsibilidade e entrega contínua de valor.",
+          aboutCountry: "Brasil",
+          skillsTitle: "Minhas <span>Habilidades</span>",
+          skillTitles: [
+            "Java",
+            "Spring Boot",
+            "Python",
+            "Node.js",
+            "React",
+            "Angular",
+            "Quarkus",
+            "Arquitetura de Microsserviços",
+            "Apache Kafka",
+            "AWS",
+            "Terraform",
+            "Docker",
+            "PostgreSQL",
+            "TDD",
+            "Product Backlog Building",
+            "Gestão Ágil",
+            "Brainstorm",
+            "Métricas",
+            "DoR",
+            "DoD",
+          ],
+          skillDescs: [
+            "Linguagem principal com foco em aplicações backend robustas",
+            "Desenvolvimento de APIs REST e microsserviços",
+            "Automação, scripts e serviços backend para soluções escaláveis",
+            "Construção de APIs e aplicações server-side com JavaScript",
+            "Interfaces modernas, componentizadas e orientadas a performance",
+            "Aplicações frontend robustas com arquitetura escalável",
+            "Framework Java para aplicações cloud-native e microsserviços",
+            "Design de sistemas distribuídos com foco em escalabilidade",
+            "Mensageria e comunicação assíncrona entre serviços",
+            "Serviços de nuvem para deploy e infraestrutura",
+            "Infraestrutura como código para provisionamento na nuvem",
+            "Containerização e orquestração de aplicações",
+            "Banco de dados relacional para aplicações de produção",
+            "Desenvolvimento orientado a testes para código confiável e evolutivo",
+            "Estruturação e refinamento de backlog com foco em valor de negócio",
+            "Condução de times e ciclos de entrega com práticas ágeis",
+            "Facilitação de sessões colaborativas para ideação e resolução de problemas",
+            "Acompanhamento de indicadores para melhoria contínua de produto e time",
+            "Definition of Ready para garantir clareza antes de iniciar as entregas",
+            "Definition of Done para padronizar qualidade e critérios de conclusão",
+          ],
+          projectsTitle: "Meus <span>Projetos</span>",
+          project1Title: "Spring Boot API REST",
+          project1Desc:
+            "Problema: necessidade de padronizar operações de cadastro. Solução: API REST com Spring Boot e PostgreSQL, documentação e boas práticas. Resultado: base confiável para integrações e evolução contínua.",
+          project2Title: "Gestão de Vagas API",
+          project2Desc:
+            "Problema: gestão manual de vagas e candidaturas. Solução: API backend com Spring Boot, JWT e PostgreSQL. Resultado: processo mais seguro, organizado e escalável para recrutamento.",
+          project3Title: "Quarkus + Kafka Microsservico",
+          project3Desc:
+            "Problema: integração entre serviços em alto volume. Solução: microsserviço com Quarkus e Kafka para comunicação assíncrona. Resultado: processamento em tempo real com mais resiliência e desacoplamento.",
+          project4Title: "Terraform AWS Deploy",
+          project4Desc:
+            "Problema: infraestrutura criada manualmente e com risco de inconsistência. Solução: provisionamento em AWS com Terraform e pipelines CI/CD. Resultado: deploy mais rápido, reproduzível e seguro.",
+          projectsSeeAll: '<i class="fab fa-github"></i> Ver todos no GitHub',
+          contactTitle: "Entre em <span>Contato</span>",
+          contactSubtitle:
+            "Estou disponível para oportunidades em times de tecnologia e para parcerias em novos projetos. Vamos conversar!",
+          contactLinkedinSubtitle: "Conecte-se comigo",
+          contactEmailTitle: "E-mail",
+          contactWhatsappTitle: "WhatsApp",
+          directContactCardTitle: "Contato Direto",
+          directContactCardSubtitle: "Preencha o formulário completo",
+          contactFormTitle: "Contato Direto",
+          contactFormHelp:
+            "Envie suas informações e retorno o contato o mais breve possível.",
+          requiredFieldsNote:
+            "Todos os campos marcados como obrigatórios precisam ser preenchidos.",
+          fieldsetContactData: "Dados de contato",
+          labelFullName: "Nome completo *",
+          labelEmail: "E-mail *",
+          labelPhone: "Telefone *",
+          labelCityState: "Cidade e Estado *",
+          fieldsetRequestDetails: "Detalhes da solicitação",
+          labelSubject: "Assunto *",
+          labelSource: "Onde viu minha página? *",
+          labelIaSource: "Qual IA indicou a página? *",
+          labelIaOther: "Qual outra IA? *",
+          labelMessage: "Mensagem *",
+          placeholderName: "Seu nome completo",
+          placeholderEmail: "seuemail@dominio.com",
+          placeholderPhone: "(00) 00000-0000",
+          placeholderCity: "Ex: São Paulo - SP",
+          placeholderSubject: "Qual o motivo do contato?",
+          placeholderMessage:
+            "Descreva seu projeto, necessidade ou oportunidade.",
+          placeholderIaOther: "Ex: Grok, Mistral, Amazon Q",
+          sourcePlaceholder: "Selecione uma opção",
+          sourceOptions: {
+            amigos: "Indicação de amigos",
+            "redes-sociais": "Redes sociais",
+            "colegas-trabalho": "Colegas de trabalho",
+            github: "GitHub",
+            linkedin: "LinkedIn",
+            ia: "Sugerido por IA",
+            outro: "Outro",
+          },
+          iaPlaceholder: "Selecione a IA",
+          iaOptions: {
+            chatgpt: "ChatGPT",
+            copilot: "GitHub Copilot",
+            gemini: "Google Gemini",
+            claude: "Claude",
+            perplexity: "Perplexity",
+            "meta-ai": "Meta AI",
+            deepseek: "DeepSeek",
+            "outra-ia": "Outra IA",
+          },
+          submit: "Enviar Contato",
+          sending: "Enviando...",
+          success: "E-mail enviado com sucesso. Aguarde retorno.",
+          error: "Não foi possível enviar agora. Tente novamente em instantes.",
+          footer:
+            '&copy; 2026 Marcílio Aguiar. Desenvolvido com <i class="fas fa-heart"></i> usando HTML &amp; CSS.',
+          htmlLang: "pt-BR",
+          formLang: "pt-BR",
+        },
+        en: {
+          navAbout: "About",
+          navSkills: "Skills",
+          navProjects: "Projects",
+          navContact: "Contact",
+          languageSwitcherAria: "Select language",
+          langPtAria: "Portuguese",
+          langEnAria: "English",
+          langEsAria: "Spanish",
+          socialGithubAria: "GitHub",
+          socialLinkedinAria: "LinkedIn",
+          socialWhatsappAria: "WhatsApp",
+          projectCodeAria: "View source code",
+          heroGreeting: "Hi, I am",
+          heroName: "Marcílio Aguiar",
+          heroRole: "Systems Developer",
+          heroDescription:
+            "Systems Developer focused on turning business challenges into scalable and robust solutions. I work with Java, Spring Boot, Python, Node.js, React, Angular, and microservices architecture on AWS.",
+          heroBtnProjects: "View Projects",
+          heroBtnContact: "Get in Touch",
+          aboutTitle: "About <span>Me</span>",
+          aboutP1:
+            "I am a systems developer focused on outcomes, working mainly on backend with <strong>Java</strong>, <strong>Spring Boot</strong>, and <strong>Quarkus</strong>, plus hands-on experience with <strong>Python</strong> and <strong>Node.js</strong> for automation, services, and integrations.",
+          aboutP2:
+            "I also build interfaces with <strong>React</strong> and <strong>Angular</strong>, work with <strong>microservices</strong> architecture, asynchronous communication with <strong>Kafka</strong>, data with <strong>PostgreSQL</strong>, and infrastructure on <strong>AWS</strong>, <strong>Terraform</strong>, and <strong>Docker</strong>. In daily work, I apply <strong>TDD</strong>, agile management, backlog building, and metrics to ensure quality, predictability, and continuous value delivery.",
+          aboutCountry: "Brazil",
+          skillsTitle: "My <span>Skills</span>",
+          skillTitles: [
+            "Java",
+            "Spring Boot",
+            "Python",
+            "Node.js",
+            "React",
+            "Angular",
+            "Quarkus",
+            "Microservices Architecture",
+            "Apache Kafka",
+            "AWS",
+            "Terraform",
+            "Docker",
+            "PostgreSQL",
+            "TDD",
+            "Product Backlog Building",
+            "Agile Management",
+            "Brainstorm",
+            "Metrics",
+            "DoR",
+            "DoD",
+          ],
+          skillDescs: [
+            "Primary language focused on robust backend applications",
+            "Development of REST APIs and microservices",
+            "Automation, scripts, and backend services for scalable solutions",
+            "Building APIs and server-side applications with JavaScript",
+            "Modern, component-based interfaces focused on performance",
+            "Robust frontend applications with scalable architecture",
+            "Java framework for cloud-native applications and microservices",
+            "Design of distributed systems focused on scalability",
+            "Messaging and asynchronous communication between services",
+            "Cloud services for deployment and infrastructure",
+            "Infrastructure as code for cloud provisioning",
+            "Application containerization and orchestration",
+            "Relational database for production applications",
+            "Test-driven development for reliable and evolvable code",
+            "Backlog structuring and refinement focused on business value",
+            "Team leadership and delivery cycles with agile practices",
+            "Facilitation of collaborative sessions for ideation and problem solving",
+            "Tracking indicators for continuous product and team improvement",
+            "Definition of Ready to ensure clarity before starting delivery",
+            "Definition of Done to standardize quality and completion criteria",
+          ],
+          projectsTitle: "My <span>Projects</span>",
+          project1Title: "Spring Boot REST API",
+          project1Desc:
+            "Problem: a need to standardize core registration workflows. Solution: a REST API built with Spring Boot and PostgreSQL, including documentation and best practices. Result: a reliable foundation for integrations and continuous evolution.",
+          project2Title: "Job Management API",
+          project2Desc:
+            "Problem: manual job and applicant management. Solution: backend API with Spring Boot, JWT, and PostgreSQL. Result: a more secure, organized, and scalable hiring workflow.",
+          project3Title: "Quarkus + Kafka Microservice",
+          project3Desc:
+            "Problem: high-volume service integration challenges. Solution: a Quarkus and Kafka microservice for asynchronous communication. Result: real-time processing with improved resilience and decoupling.",
+          project4Title: "Terraform AWS Deploy",
+          project4Desc:
+            "Problem: manually created infrastructure with inconsistency risk. Solution: AWS provisioning with Terraform and CI/CD pipelines. Result: faster, repeatable, and safer deployments.",
+          projectsSeeAll: '<i class="fab fa-github"></i> See all on GitHub',
+          contactTitle: "Get in <span>Touch</span>",
+          contactSubtitle:
+            "I am available for opportunities with technology teams and partnerships on new projects. Let’s connect!",
+          contactLinkedinSubtitle: "Connect with me",
+          contactEmailTitle: "Email",
+          contactWhatsappTitle: "WhatsApp",
+          directContactCardTitle: "Direct Contact",
+          directContactCardSubtitle: "Fill out the complete form",
+          contactFormTitle: "Direct Contact",
+          contactFormHelp:
+            "Share your details and I will get back to you as soon as possible.",
+          requiredFieldsNote: "All required fields must be completed.",
+          fieldsetContactData: "Contact details",
+          labelFullName: "Full name *",
+          labelEmail: "E-mail *",
+          labelPhone: "Phone *",
+          labelCityState: "City and State *",
+          fieldsetRequestDetails: "Request details",
+          labelSubject: "Subject *",
+          labelSource: "Where did you hear about my page? *",
+          labelIaSource: "Which AI suggested this page? *",
+          labelIaOther: "Which other AI? *",
+          labelMessage: "Message *",
+          placeholderName: "Your full name",
+          placeholderEmail: "youremail@domain.com",
+          placeholderPhone: "(+00) 00000-0000",
+          placeholderCity: "Ex: Austin - TX",
+          placeholderSubject: "What is the reason for contact?",
+          placeholderMessage:
+            "Describe your project, need, or opportunity.",
+          placeholderIaOther: "Ex: Grok, Mistral, Amazon Q",
+          sourcePlaceholder: "Select an option",
+          sourceOptions: {
+            amigos: "Friends referral",
+            "redes-sociais": "Social media",
+            "colegas-trabalho": "Work colleagues",
+            github: "GitHub",
+            linkedin: "LinkedIn",
+            ia: "Suggested by AI",
+            outro: "Other",
+          },
+          iaPlaceholder: "Select the AI",
+          iaOptions: {
+            chatgpt: "ChatGPT",
+            copilot: "GitHub Copilot",
+            gemini: "Google Gemini",
+            claude: "Claude",
+            perplexity: "Perplexity",
+            "meta-ai": "Meta AI",
+            deepseek: "DeepSeek",
+            "outra-ia": "Other AI",
+          },
+          submit: "Send Message",
+          sending: "Sending...",
+          success: "Message sent successfully. I will get back to you soon.",
+          error: "Could not send right now. Please try again in a moment.",
+          footer:
+            '&copy; 2026 Marcílio Aguiar. Built with <i class="fas fa-heart"></i> using HTML &amp; CSS.',
+          htmlLang: "en",
+          formLang: "en",
+        },
+        es: {
+          navAbout: "Sobre",
+          navSkills: "Habilidades",
+          navProjects: "Proyectos",
+          navContact: "Contacto",
+          languageSwitcherAria: "Seleccionar idioma",
+          langPtAria: "Português",
+          langEnAria: "Inglés",
+          langEsAria: "Español",
+          socialGithubAria: "GitHub",
+          socialLinkedinAria: "LinkedIn",
+          socialWhatsappAria: "WhatsApp",
+          projectCodeAria: "Ver código fuente",
+          heroGreeting: "Hola, soy",
+          heroName: "Marcílio Aguiar",
+          heroRole: "Desarrollador de Sistemas",
+          heroDescription:
+            "Desarrollador de Sistemas enfocado en convertir desafíos de negocio en soluciones escalables y robustas. Trabajo con Java, Spring Boot, Python, Node.js, React, Angular y arquitectura de microservicios en AWS.",
+          heroBtnProjects: "Ver Proyectos",
+          heroBtnContact: "Contactar",
+          aboutTitle: "Sobre <span>Mí</span>",
+          aboutP1:
+            "Soy un desarrollador de sistemas orientado a resultados, actuando principalmente en backend con <strong>Java</strong>, <strong>Spring Boot</strong> y <strong>Quarkus</strong>, además de experiencia práctica con <strong>Python</strong> y <strong>Node.js</strong> para automatizaciones, servicios e integraciones.",
+          aboutP2:
+            "También desarrollo interfaces con <strong>React</strong> y <strong>Angular</strong>, trabajo con arquitectura de <strong>microservicios</strong>, comunicación asíncrona con <strong>Kafka</strong>, datos con <strong>PostgreSQL</strong> e infraestructura en <strong>AWS</strong>, <strong>Terraform</strong> y <strong>Docker</strong>. En el día a día aplico <strong>TDD</strong>, gestión ágil, construcción de backlog y métricas para asegurar calidad, previsibilidad y entrega continua de valor.",
+          aboutCountry: "Brasil",
+          skillsTitle: "Mis <span>Habilidades</span>",
+          skillTitles: [
+            "Java",
+            "Spring Boot",
+            "Python",
+            "Node.js",
+            "React",
+            "Angular",
+            "Quarkus",
+            "Arquitectura de Microservicios",
+            "Apache Kafka",
+            "AWS",
+            "Terraform",
+            "Docker",
+            "PostgreSQL",
+            "TDD",
+            "Product Backlog Building",
+            "Gestión Ágil",
+            "Brainstorm",
+            "Métricas",
+            "DoR",
+            "DoD",
+          ],
+          skillDescs: [
+            "Lenguaje principal con enfoque en aplicaciones backend robustas",
+            "Desarrollo de APIs REST y microservicios",
+            "Automatización, scripts y servicios backend para soluciones escalables",
+            "Construcción de APIs y aplicaciones server-side con JavaScript",
+            "Interfaces modernas, componentizadas y orientadas al rendimiento",
+            "Aplicaciones frontend robustas con arquitectura escalable",
+            "Framework Java para aplicaciones cloud-native y microservicios",
+            "Diseño de sistemas distribuidos con foco en escalabilidad",
+            "Mensajería y comunicación asíncrona entre servicios",
+            "Servicios en la nube para despliegue e infraestructura",
+            "Infraestructura como código para provisionamiento en la nube",
+            "Containerización y orquestación de aplicaciones",
+            "Base de datos relacional para aplicaciones de producción",
+            "Desarrollo orientado a pruebas para código confiable y evolutivo",
+            "Estructuración y refinamiento de backlog con foco en valor de negocio",
+            "Conducción de equipos y ciclos de entrega con prácticas ágiles",
+            "Facilitación de sesiones colaborativas para ideación y resolución de problemas",
+            "Seguimiento de indicadores para mejora continua de producto y equipo",
+            "Definition of Ready para garantizar claridad antes de iniciar las entregas",
+            "Definition of Done para estandarizar calidad y criterios de finalización",
+          ],
+          projectsTitle: "Mis <span>Proyectos</span>",
+          project1Title: "Spring Boot API REST",
+          project1Desc:
+            "Problema: necesidad de estandarizar operaciones clave de registro. Solución: API REST con Spring Boot y PostgreSQL, documentación y buenas prácticas. Resultado: base confiable para integraciones y evolución continua.",
+          project2Title: "API de Gestión de Vacantes",
+          project2Desc:
+            "Problema: gestión manual de vacantes y candidaturas. Solución: API backend con Spring Boot, JWT y PostgreSQL. Resultado: proceso de reclutamiento más seguro, organizado y escalable.",
+          project3Title: "Microservicio Quarkus + Kafka",
+          project3Desc:
+            "Problema: integración entre servicios con alto volumen de eventos. Solución: microservicio con Quarkus y Kafka para comunicación asíncrona. Resultado: procesamiento en tiempo real con mayor resiliencia y desacoplamiento.",
+          project4Title: "Terraform AWS Deploy",
+          project4Desc:
+            "Problema: infraestructura creada manualmente y propensa a inconsistencias. Solución: aprovisionamiento en AWS con Terraform y pipelines CI/CD. Resultado: despliegues más rápidos, repetibles y seguros.",
+          projectsSeeAll: '<i class="fab fa-github"></i> Ver todo en GitHub',
+          contactTitle: "Ponte en <span>Contacto</span>",
+          contactSubtitle:
+            "Estoy disponible para oportunidades en equipos de tecnología y para alianzas en nuevos proyectos. ¡Hablemos!",
+          contactLinkedinSubtitle: "Conecta conmigo",
+          contactEmailTitle: "Correo electrónico",
+          contactWhatsappTitle: "WhatsApp",
+          directContactCardTitle: "Contacto Directo",
+          directContactCardSubtitle: "Completa el formulario",
+          contactFormTitle: "Contacto Directo",
+          contactFormHelp:
+            "Comparte tu información y te responderé lo antes posible.",
+          requiredFieldsNote: "Todos los campos obligatorios deben completarse.",
+          fieldsetContactData: "Datos de contacto",
+          labelFullName: "Nombre completo *",
+          labelEmail: "Correo *",
+          labelPhone: "Teléfono *",
+          labelCityState: "Ciudad y Estado *",
+          fieldsetRequestDetails: "Detalles de la solicitud",
+          labelSubject: "Asunto *",
+          labelSource: "¿Dónde conociste mi página? *",
+          labelIaSource: "¿Qué IA sugirió esta página? *",
+          labelIaOther: "¿Cuál otra IA? *",
+          labelMessage: "Mensaje *",
+          placeholderName: "Tu nombre completo",
+          placeholderEmail: "tucorreo@dominio.com",
+          placeholderPhone: "(+00) 00000-0000",
+          placeholderCity: "Ej: Madrid - ES",
+          placeholderSubject: "¿Cuál es el motivo del contacto?",
+          placeholderMessage:
+            "Describe tu proyecto, necesidad u oportunidad.",
+          placeholderIaOther: "Ej: Grok, Mistral, Amazon Q",
+          sourcePlaceholder: "Selecciona una opción",
+          sourceOptions: {
+            amigos: "Recomendación de amigos",
+            "redes-sociais": "Redes sociales",
+            "colegas-trabalho": "Colegas de trabajo",
+            github: "GitHub",
+            linkedin: "LinkedIn",
+            ia: "Sugerido por IA",
+            outro: "Otro",
+          },
+          iaPlaceholder: "Selecciona la IA",
+          iaOptions: {
+            chatgpt: "ChatGPT",
+            copilot: "GitHub Copilot",
+            gemini: "Google Gemini",
+            claude: "Claude",
+            perplexity: "Perplexity",
+            "meta-ai": "Meta AI",
+            deepseek: "DeepSeek",
+            "outra-ia": "Otra IA",
+          },
+          submit: "Enviar Mensaje",
+          sending: "Enviando...",
+          success: "Mensaje enviado con éxito. Te responderé pronto.",
+          error: "No se pudo enviar ahora. Intenta nuevamente en unos instantes.",
+          footer:
+            '&copy; 2026 Marcílio Aguiar. Desarrollado con <i class="fas fa-heart"></i> usando HTML &amp; CSS.',
+          htmlLang: "es",
+          formLang: "es",
+        },
+      };
+
+      const updateOptionText = (selectElement, value, text) => {
+        const option = selectElement.querySelector(`option[value="${value}"]`);
+        if (option) {
+          option.textContent = text;
+        }
+      };
+
+      const setText = (id, text) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.textContent = text;
+        }
+      };
+
+      const setHtml = (id, html) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.innerHTML = html;
+        }
+      };
+
+      const applyLanguage = (lang) => {
+        const t = translations[lang] || translations.pt;
+
+        setText("nav-about", t.navAbout);
+        setText("nav-skills", t.navSkills);
+        setText("nav-projects", t.navProjects);
+        setText("nav-contact", t.navContact);
+        document
+          .getElementById("language-switcher")
+          .setAttribute("aria-label", t.languageSwitcherAria);
+        document
+          .getElementById("lang-btn-pt")
+          .setAttribute("aria-label", t.langPtAria);
+        document
+          .getElementById("lang-btn-pt")
+          .setAttribute("title", t.langPtAria);
+        document
+          .getElementById("lang-btn-en")
+          .setAttribute("aria-label", t.langEnAria);
+        document
+          .getElementById("lang-btn-en")
+          .setAttribute("title", t.langEnAria);
+        document
+          .getElementById("lang-btn-es")
+          .setAttribute("aria-label", t.langEsAria);
+        document
+          .getElementById("lang-btn-es")
+          .setAttribute("title", t.langEsAria);
+
+        document
+          .getElementById("hero-social-github")
+          .setAttribute("aria-label", t.socialGithubAria);
+        document
+          .getElementById("hero-social-linkedin")
+          .setAttribute("aria-label", t.socialLinkedinAria);
+        document
+          .getElementById("hero-social-whatsapp")
+          .setAttribute("aria-label", t.socialWhatsappAria);
+        document
+          .getElementById("project-1-code-link")
+          .setAttribute("aria-label", t.projectCodeAria);
+        document
+          .getElementById("project-2-code-link")
+          .setAttribute("aria-label", t.projectCodeAria);
+        document
+          .getElementById("project-3-code-link")
+          .setAttribute("aria-label", t.projectCodeAria);
+        document
+          .getElementById("project-4-code-link")
+          .setAttribute("aria-label", t.projectCodeAria);
+        setText("hero-greeting", t.heroGreeting);
+        setText("hero-name", t.heroName);
+        setText("hero-role", t.heroRole);
+        setText("hero-description", t.heroDescription);
+        setText("hero-btn-projects", t.heroBtnProjects);
+        setText("hero-btn-contact", t.heroBtnContact);
+
+        setHtml("about-title", t.aboutTitle);
+        setHtml("about-p1", t.aboutP1);
+        setHtml("about-p2", t.aboutP2);
+        setText("about-country", t.aboutCountry);
+
+        setHtml("skills-title", t.skillsTitle);
+        for (let i = 1; i <= 20; i += 1) {
+          setText(`skill-${i}-title`, t.skillTitles[i - 1]);
+          setText(`skill-${i}-desc`, t.skillDescs[i - 1]);
+        }
+        setHtml("projects-title", t.projectsTitle);
+        setText("project-1-title", t.project1Title);
+        setText("project-1-desc", t.project1Desc);
+        setText("project-2-title", t.project2Title);
+        setText("project-2-desc", t.project2Desc);
+        setText("project-3-title", t.project3Title);
+        setText("project-3-desc", t.project3Desc);
+        setText("project-4-title", t.project4Title);
+        setText("project-4-desc", t.project4Desc);
+        setHtml("projects-see-all", t.projectsSeeAll);
+
+        setHtml("contact-title", t.contactTitle);
+        setText("contact-subtitle", t.contactSubtitle);
+        setText("contact-linkedin-subtitle", t.contactLinkedinSubtitle);
+        setText("contact-email-title", t.contactEmailTitle);
+        setText("contact-whatsapp-title", t.contactWhatsappTitle);
+        setText("direct-contact-card-title", t.directContactCardTitle);
+        setText("direct-contact-card-subtitle", t.directContactCardSubtitle);
+        setText("contact-form-title", t.contactFormTitle);
+        setText("contact-form-help", t.contactFormHelp);
+        setText("required-fields-note", t.requiredFieldsNote);
+        setText("fieldset-contact-data", t.fieldsetContactData);
+        setText("label-full-name", t.labelFullName);
+        setText("label-email", t.labelEmail);
+        setText("label-phone", t.labelPhone);
+        setText("label-city-state", t.labelCityState);
+        setText("fieldset-request-details", t.fieldsetRequestDetails);
+        setText("label-subject", t.labelSubject);
+        setText("label-source", t.labelSource);
+        setText("label-ia-source", t.labelIaSource);
+        setText("label-message", t.labelMessage);
+
+        document.querySelector('label[for="ia-outra"]').textContent =
+          t.labelIaOther;
+
+        document.getElementById("nome-completo").placeholder = t.placeholderName;
+        document.getElementById("email").placeholder = t.placeholderEmail;
+        document.getElementById("telefone").placeholder = t.placeholderPhone;
+        document.getElementById("cidade").placeholder = t.placeholderCity;
+        document.getElementById("assunto").placeholder = t.placeholderSubject;
+        document.getElementById("mensagem").placeholder = t.placeholderMessage;
+        document.getElementById("ia-outra").placeholder = t.placeholderIaOther;
+
+        origemSelect.querySelector('option[value=""]').textContent =
+          t.sourcePlaceholder;
+        Object.entries(t.sourceOptions).forEach(([value, text]) => {
+          updateOptionText(origemSelect, value, text);
+        });
+
+        iaFonteSelect.querySelector('option[value=""]').textContent =
+          t.iaPlaceholder;
+        Object.entries(t.iaOptions).forEach(([value, text]) => {
+          updateOptionText(iaFonteSelect, value, text);
+        });
+
+        submitButton.textContent = t.submit;
+        submitButton.setAttribute("aria-label", t.submit);
+        setHtml("footer-text", t.footer);
+
+        document.documentElement.lang = t.htmlLang;
+        formLanguageInput.value = t.formLang;
+
+        languageButtons.forEach((button) => {
+          button.classList.toggle("active", button.dataset.lang === lang);
+        });
+
+        currentLang = lang;
+        localStorage.setItem("siteLang", lang);
+      };
 
       const toggleIaField = () => {
         const shouldShowIaField = origemSelect.value === "ia";
@@ -651,21 +1286,29 @@
         }
       };
 
-      origemSelect.addEventListener("change", toggleIaField);
-      iaFonteSelect.addEventListener("change", toggleOtherIaField);
-      toggleIaField();
-
       const showNotification = (message, type) => {
         notification.textContent = message;
         notification.className = `form-notification ${type}`;
         notification.hidden = false;
       };
 
+      origemSelect.addEventListener("change", toggleIaField);
+      iaFonteSelect.addEventListener("change", toggleOtherIaField);
+
+      languageButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          applyLanguage(button.dataset.lang);
+        });
+      });
+
+      applyLanguage(currentLang);
+      toggleIaField();
+
       contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         submitButton.disabled = true;
-        submitButton.textContent = "Enviando...";
+        submitButton.textContent = translations[currentLang].sending;
 
         try {
           const response = await fetch(contactForm.action, {
@@ -680,22 +1323,16 @@
             throw new Error("Falha no envio");
           }
 
-          showNotification(
-            "E-mail enviado com sucesso. Aguarde retorno.",
-            "success"
-          );
+          showNotification(translations[currentLang].success, "success");
 
           setTimeout(() => {
             window.location.reload();
           }, 1800);
         } catch (error) {
-          showNotification(
-            "Nao foi possivel enviar agora. Tente novamente em instantes.",
-            "error"
-          );
+          showNotification(translations[currentLang].error, "error");
 
           submitButton.disabled = false;
-          submitButton.textContent = "Enviar Contato";
+          submitButton.textContent = translations[currentLang].submit;
         }
       });
     </script>
