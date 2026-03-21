@@ -436,6 +436,7 @@
             Envie suas informações e retorno o contato o mais breve possivel.
           </p>
           <form
+            id="contact-form"
             class="contact-form"
             action="https://formspree.io/f/xqeyjjjk"
             method="POST"
@@ -536,6 +537,40 @@
                 </div>
               </div>
 
+              <div
+                id="ia-details-group"
+                class="form-group conditional-field"
+                hidden
+              >
+                <label for="ia-fonte">Qual IA indicou a pagina? *</label>
+                <select id="ia-fonte" name="ia_fonte" disabled>
+                  <option value="" selected disabled>Selecione a IA</option>
+                  <option value="chatgpt">ChatGPT</option>
+                  <option value="copilot">GitHub Copilot</option>
+                  <option value="gemini">Google Gemini</option>
+                  <option value="claude">Claude</option>
+                  <option value="perplexity">Perplexity</option>
+                  <option value="meta-ai">Meta AI</option>
+                  <option value="deepseek">DeepSeek</option>
+                  <option value="outra-ia">Outra IA</option>
+                </select>
+              </div>
+
+              <div
+                id="ia-other-group"
+                class="form-group conditional-field"
+                hidden
+              >
+                <label for="ia-outra">Qual outra IA? *</label>
+                <input
+                  type="text"
+                  id="ia-outra"
+                  name="ia_outra"
+                  placeholder="Ex: Grok, Mistral, Amazon Q"
+                  disabled
+                />
+              </div>
+
               <div class="form-group">
                 <label for="mensagem">Mensagem *</label>
                 <textarea
@@ -548,10 +583,23 @@
               </div>
             </fieldset>
 
-            <button type="submit" class="btn btn-primary" aria-label="Enviar formulario de contato direto">
+            <button
+              type="submit"
+              id="contact-submit"
+              class="btn btn-primary"
+              aria-label="Enviar formulario de contato direto"
+            >
               Enviar Contato
             </button>
           </form>
+
+          <div
+            id="form-notification"
+            class="form-notification"
+            role="alert"
+            aria-live="assertive"
+            hidden
+          ></div>
         </div>
       </div>
     </section>
@@ -565,5 +613,91 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      const contactForm = document.getElementById("contact-form");
+      const submitButton = document.getElementById("contact-submit");
+      const notification = document.getElementById("form-notification");
+      const origemSelect = document.getElementById("origem");
+      const iaDetailsGroup = document.getElementById("ia-details-group");
+      const iaFonteSelect = document.getElementById("ia-fonte");
+      const iaOtherGroup = document.getElementById("ia-other-group");
+      const iaOutraInput = document.getElementById("ia-outra");
+
+      const toggleIaField = () => {
+        const shouldShowIaField = origemSelect.value === "ia";
+
+        iaDetailsGroup.hidden = !shouldShowIaField;
+        iaFonteSelect.disabled = !shouldShowIaField;
+        iaFonteSelect.required = shouldShowIaField;
+
+        if (!shouldShowIaField) {
+          iaFonteSelect.value = "";
+        }
+
+        toggleOtherIaField();
+      };
+
+      const toggleOtherIaField = () => {
+        const shouldShowOtherIa =
+          origemSelect.value === "ia" && iaFonteSelect.value === "outra-ia";
+
+        iaOtherGroup.hidden = !shouldShowOtherIa;
+        iaOutraInput.disabled = !shouldShowOtherIa;
+        iaOutraInput.required = shouldShowOtherIa;
+
+        if (!shouldShowOtherIa) {
+          iaOutraInput.value = "";
+        }
+      };
+
+      origemSelect.addEventListener("change", toggleIaField);
+      iaFonteSelect.addEventListener("change", toggleOtherIaField);
+      toggleIaField();
+
+      const showNotification = (message, type) => {
+        notification.textContent = message;
+        notification.className = `form-notification ${type}`;
+        notification.hidden = false;
+      };
+
+      contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Enviando...";
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (!response.ok) {
+            throw new Error("Falha no envio");
+          }
+
+          showNotification(
+            "E-mail enviado com sucesso. Aguarde retorno.",
+            "success"
+          );
+
+          setTimeout(() => {
+            window.location.reload();
+          }, 1800);
+        } catch (error) {
+          showNotification(
+            "Nao foi possivel enviar agora. Tente novamente em instantes.",
+            "error"
+          );
+
+          submitButton.disabled = false;
+          submitButton.textContent = "Enviar Contato";
+        }
+      });
+    </script>
   </body>
 </html>

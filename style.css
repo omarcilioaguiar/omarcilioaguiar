@@ -50,6 +50,10 @@ img {
   display: block;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 /* ===========================
    Scrollbar
 =========================== */
@@ -611,6 +615,10 @@ img {
   gap: 0.45rem;
 }
 
+.conditional-field {
+  margin-top: -0.2rem;
+}
+
 .form-group label {
   font-size: 0.88rem;
   font-weight: 600;
@@ -645,6 +653,38 @@ img {
 
 .contact-form .btn {
   align-self: flex-start;
+}
+
+.contact-form .btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.form-notification {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  z-index: 1200;
+  min-width: 280px;
+  max-width: 360px;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1px solid;
+  box-shadow: var(--shadow);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.form-notification.success {
+  background: #ecfdf3;
+  color: #205b3b;
+  border-color: #89d6ab;
+}
+
+.form-notification.error {
+  background: #fff0f0;
+  color: #7e2d2d;
+  border-color: #e6a3a3;
 }
 
 .sr-only {
@@ -738,6 +778,13 @@ img {
 
   .contact-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-notification {
+    left: 1rem;
+    right: 1rem;
+    max-width: none;
+    min-width: 0;
   }
 }
 
