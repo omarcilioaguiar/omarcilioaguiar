@@ -57,6 +57,12 @@
             aria-label="LinkedIn"
             ><i class="fab fa-linkedin-in"></i
           ></a>
+          <a
+            href="https://wa.me/5577981353582"
+            target="_blank"
+            aria-label="WhatsApp"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
         </div>
       </div>
       <div class="hero-image">
@@ -408,6 +414,144 @@
             <h3>E-mail</h3>
             <p>marcilo.paguiar@gmail.com</p>
           </a>
+          <a
+            href="https://wa.me/5577981353582"
+            target="_blank"
+            class="contact-card"
+          >
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <p>(77) 98135-3582</p>
+          </a>
+          <a href="#contato-direto" class="contact-card">
+            <i class="fas fa-address-card"></i>
+            <h3>Contato Direto</h3>
+            <p>Preencha o formulario completo</p>
+          </a>
+        </div>
+
+        <div id="contato-direto" class="contact-form-wrapper">
+          <h3 class="contact-form-title">Contato Direto</h3>
+          <p id="contact-form-help" class="contact-form-subtitle">
+            Envie suas informações e retorno o contato o mais breve possivel.
+          </p>
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/xqeyjjjk"
+            method="POST"
+            aria-describedby="contact-form-help required-fields-note"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="Novo contato pelo portfolio"
+            />
+            <input type="hidden" name="_language" value="pt-BR" />
+            <p id="required-fields-note" class="sr-only">
+              Todos os campos marcados como obrigatorios precisam ser preenchidos.
+            </p>
+
+            <fieldset class="form-fieldset">
+              <legend>Dados de contato</legend>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nome-completo">Nome completo *</label>
+                  <input
+                    type="text"
+                    id="nome-completo"
+                    name="nome_completo"
+                    placeholder="Seu nome completo"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="seuemail@dominio.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="telefone">Telefone *</label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(00) 00000-0000"
+                    autocomplete="tel-national"
+                    inputmode="tel"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="cidade">Cidade e Estado *</label>
+                  <input
+                    type="text"
+                    id="cidade"
+                    name="cidade_estado"
+                    placeholder="Ex: Sao Paulo - SP"
+                    autocomplete="address-level2"
+                    required
+                  />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+              <legend>Detalhes da solicitacao</legend>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="assunto">Assunto *</label>
+                  <input
+                    type="text"
+                    id="assunto"
+                    name="assunto"
+                    placeholder="Qual o motivo do contato?"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="origem">Onde viu minha página? *</label>
+                  <select id="origem" name="origem" required>
+                    <option value="" selected disabled>Selecione uma opção</option>
+                    <option value="amigos">Indicacao de amigos</option>
+                    <option value="redes-sociais">Redes sociais</option>
+                    <option value="colegas-trabalho">Colegas de trabalho</option>
+                    <option value="github">GitHub</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="ia">Sugerido por IA</option>
+                    <option value="outro">Outro</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem">Mensagem *</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  rows="5"
+                  placeholder="Descreva seu projeto, necessidade ou oportunidade."
+                  required
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary" aria-label="Enviar formulario de contato direto">
+              Enviar Contato
+            </button>
+          </form>
         </div>
       </div>
     </section>
